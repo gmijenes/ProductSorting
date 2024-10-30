@@ -5,11 +5,14 @@ The ProductSorting API is a RESTful application built with .NET 6 that allows yo
 ## Table of Contents
 - [Dependencies and Development](#dependencies-and-development)
 - [Testing](#Testing)
+- [Running as container](#running-as-container)
+- [Making requests to the container](#making-requests-to-the-container)
 
 ## Dependencies and Development
 ### Main Technologies:
 * .NET 6 SDK
 * Docker
+* Postman
 
 ### Development steps:
 1. **Fork the repository** from GitHub root https://github.com/gmijenes/ProductSorting.git
@@ -201,4 +204,21 @@ Resulting error:
   "3",
   "1"
 ].
+
+## Running as container
+1. **Installing dependencies**: Make sure you have Docker installed. If not, you can install it from the official website [here](https://www.docker.com/). 
+
+2. **Build the docker image** from the _ProductSorting/dockerfile_:
+   
+``docker build -t product-sorting-service:latest . ``
+
+3. **Run the container**:
+
+`` docker run -d -p 8080:80 product-sorting-service ``
+
+At this point, the service should be running in the container and ready to receive requests.
+
+## Making requests to the container
+1. **Install postman:** To send requests to the server, it is recommended to use Postman. You can install it from [here](https://www.postman.com/downloads/).
+2. **Add the postman collection file** _SortingProducts.postman_collection.json_ as a new collection in your postman app, select _Sort Products_ request and send. 
 
