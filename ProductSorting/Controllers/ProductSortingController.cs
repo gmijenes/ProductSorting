@@ -11,6 +11,20 @@ namespace ProductSorting.Controllers
         [HttpPost("sort-products")]
         public IActionResult SortProducts(SortProductsRequest request)
         {
+            if (request.SalesWeight + request.StockWeight != 1)
+                {
+                    return BadRequest( new
+                    {
+                        type = "Weight format error",
+                        title = "One or more validation errors occurred.",
+                        status = 400,
+                        errors = new
+                        {
+                            request = new[] { "The sum of salesWeight and stockWeight must be equal to 1." }
+                        }
+                    });
+                }
+
             // Left Join desde ProductStock hacia ProductSales
             var leftJoinProducts = request.ProductStock
                 .GroupJoin(
