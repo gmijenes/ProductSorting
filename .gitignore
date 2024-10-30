@@ -1,0 +1,23 @@
+# Archivos de compilación
+bin/
+obj/
+
+# Archivos de configuración y secretos
+*.json
+!appsettings.json
+
+# Archivos de usuario y configuración de IDE
+*.csproj.user
+.vs/
+.vscode/
+
+# Paquetes y dependencias
+*.nuget/
+project.assets.json
+*.props
+*.targets
+
+# Carpetas y archivos de respaldo
+_ReSharper.Caches/
+*.cache
+*.log
