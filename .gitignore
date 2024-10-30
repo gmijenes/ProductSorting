@@ -2,9 +2,6 @@
 bin/
 obj/
 
-# Archivos de configuración y secretos
-*.json
-!appsettings.json
 
 # Archivos de usuario y configuración de IDE
 *.csproj.user
