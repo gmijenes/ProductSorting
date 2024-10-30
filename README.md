@@ -202,19 +202,3 @@ Resulting error:
   "1"
 ].
 
-
-curl -X 'POST' 'http://localhost:16134/api/ProductSorting/sort-products'  -H 'accept: */*'   -H 'Content-Type: application/json'  -d '{
-  "salesWeight": 0.5,
-  "stockWeight": 0.5,
-  "productSales": [
-    {"productId": "1", "sales": 50000},
-    {"productId": "2", "sales": 100000},
-    {"productId": "3", "sales": 100000},
-    {"productId": "4", "sales": 750000}
-  ],
-  "productStock": [
-    {"productId": "1", "stock": 100000},
-    {"productId": "3", "stock": 200000},
-    {"productId": "4", "stock": 300000}
-  ]
-}'
