@@ -1,0 +1,43 @@
+{
+	"info": {
+		"_postman_id": "94ca37f2-111d-470d-8d20-80a8c4bb281e",
+		"name": "SortingProducts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29036153"
+	},
+	"item": [
+		{
+			"name": "Sort Products",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"salesWeight\": 0.5,\r\n  \"stockWeight\": 0.5,\r\n  \"productSales\": [\r\n    {\"productId\": \"1\", \"sales\": 50000},\r\n    {\"productId\": \"2\", \"sales\": 100000},\r\n    {\"productId\": \"3\", \"sales\": 100000},\r\n    {\"productId\": \"4\", \"sales\": 750000}\r\n  ],\r\n  \"productStock\": [\r\n    {\"productId\": \"1\", \"stock\": 100000},\r\n    {\"productId\": \"3\", \"stock\": 200000},\r\n    {\"productId\": \"4\", \"stock\": 300000}\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/ProductSorting/sort-products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"ProductSorting",
+						"sort-products"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
